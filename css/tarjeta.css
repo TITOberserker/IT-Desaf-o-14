@@ -1,0 +1,81 @@
+.contenedor{
+    width: 100%;
+    height: 500px;
+}
+.tarjetas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.box{
+   position: relative;
+   width: 300px;
+   height: 400px;
+   margin: 20px;
+}
+.box .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 1s;
+
+}
+.box .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.box h1{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color:#fff;
+    text-align: center;
+    font-weight: 100;
+    font-size: 25px;
+    background: rgba(27,27,27,0.6);
+   
+
+}
+.box .front{
+    transform: perspective(500px)rotateY(0deg);
+    box-shadow: 0,5px,10px, #000;
+}
+.box .back{
+    transform: perspective(500px)rotateY(180deg);
+    background: rgb(33, 48, 58);
+    padding: 15px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0,5px,10px,#000;
+ }
+ .box .back h1{
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+ }
+
+.box:hover .front{
+    transform: perspective(500px)rotateY(180deg);
+    box-shadow: 0 0 5px rgba(0,0,0,0.7);
+   
+    
+}
+.box:hover .back{
+    transform: perspective(500px)rotateY(360deg);
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.7);
+   
+    
+}
+
