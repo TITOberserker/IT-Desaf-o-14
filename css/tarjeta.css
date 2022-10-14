@@ -1,18 +1,26 @@
+:root{
+    --tipo-de-letra-en-tarjeta: 'Courier New', Courier, monospace;
+    --ancho-de-box:350px;
+    --alto-de-box:410px;
+}
 .contenedor{
     width: 100%;
     height: 500px;
+
 }
 .tarjetas{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    font-family: var(--tipo-de-letra-en-tarjeta);
+
 }
 
 .box{
    position: relative;
-   width: 300px;
-   height: 400px;
+   width:var(--ancho-de-box);
+   height:var(--alto-de-box);
    margin: 20px;
 }
 .box .face{
@@ -42,6 +50,7 @@
     font-weight: 100;
     font-size: 25px;
     background: rgba(27,27,27,0.6);
+    font-family: var(--tipo-de-letra);
    
 
 }
@@ -64,6 +73,7 @@
     font-size: 30px;
     margin-top: 20px;
     letter-spacing: 2px;
+
  }
 
 .box:hover .front{
